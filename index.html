@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/style.css" rel="stylesheet">
+    <script src="JAVA/script.js" defer></script>
+    <title>Country API</title>
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <h3>Where in the world?</h3>
+        </div>
+        <div class="colorMs">
+            <button type="button" id="Dbtn" class="dbtn"><i class="bi bi-moon"></i> Dark Mode</button>
+            <button type="button" id="Lbtn" class="lbtn"><i class="bi bi-sun-fill"></i> Light Mode</button>
+        </div>
+    </nav>
+    <section name="filter" class="filter">
+        <div class="search">
+            <input type="text" id="searchbar" placeholder="Search for a country..." onkeyup="filterCountries()">
+        </div>
+        <div class="by-region">
+            <button type="button" id="regionsbtn" class="regionsbtn">Filter by Region <i class="bi bi-arrow-down-short"></i></button>
+            <div class="regions" id="regionList">
+                <ul class="countries">
+                    <li><button type="button" id="africabtn" onclick="">Africa</button></li>
+                    <li><button type="button" id="americabtn">Americas</button></li>
+                    <li><button type="button" id="asiabtn">Asia</button></li>
+                    <li><button type="button" id="europebtn">Europe</button></li>
+                    <li><button type="button" id="oceanabtn">Oceania</button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <main>
+        <!-- Country Details -->
+        
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
