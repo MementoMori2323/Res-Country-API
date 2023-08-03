@@ -85,7 +85,6 @@ button:hover{
     background-color:  hsl(209, 23%, 22%);
     color: white;
     font-family: 'Nunito Sans', sans-serif;
-    width: 200%;
 }
 .dark-mode #searchbar::placeholder{
     color: white;
