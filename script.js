@@ -65,32 +65,36 @@ async function filterCountries() {
 }
 
 // Function to create country cards dynamically
-async function populateCountryCards() {
-    const main = document.querySelector('main');
-    const countries = await fetchCountries();
 
-    countries.forEach((country) => {
-        const countryCard = document.createElement('div');
-        countryCard.className = 'countrycard';
-        countryCard.innerHTML = `
-          <a href="#">
-            <picture>
-              <img src="${country.flags.png}" loading="lazy">
-            </picture>
-            <div class="countryinfo">
-              <h3>${country.name.common}</h3>
-              <br/>
-              <ul>
-                <li>Population: ${country.population}</li>
-                <li>Region: ${country.region}</li>
-                <li>Capital: ${country.capital}</li>
-              </ul>
-            </div>
-          </a>
-        `;
-        main.appendChild(countryCard);
-    });
+async function populateCountryCards() {
+  const main = document.querySelector('main');
+  const countries = await fetchCountries();
+
+  countries.forEach((country) => {
+      const countryCard = document.createElement('div');
+      countryCard.className = 'countrycard';
+      countryCard.innerHTML = `
+        <a href="country_details.html?country=${encodeURIComponent(country.name.common)}">
+          <picture>
+            <img src="${country.flags.png}" loading="lazy">
+          </picture>
+          <div class="countryinfo">
+            <h3>${country.name.common}</h3>
+            <br/>
+            <ul>
+              <li>Population: ${country.population}</li>
+              <li>Region: ${country.region}</li>
+              <li>Capital: ${country.capital}</li>
+            </ul>
+          </div>
+        </a>
+      `;
+      main.appendChild(countryCard);
+  });
 }
+
+// ... Rest of the code ...
+
 
 // Fetch and populate country cards on page load
 populateCountryCards();
@@ -128,4 +132,3 @@ africabtn.addEventListener('click', function() {
       card.style.display = matchesRegion ? 'block' : 'none';
     });
 }
-  
