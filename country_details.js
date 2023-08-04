@@ -42,6 +42,7 @@ async function fetchCountryDetails(countryName) {
 
 function displayCountryDetails(country) {
     if (country) {
+        const nativeElement = document.getElementById('native');
         const countryNameElement = document.getElementById("country-name");
         const populationElement = document.getElementById("population");
         const regionElement = document.getElementById("region");
@@ -52,6 +53,7 @@ function displayCountryDetails(country) {
         const languagesElement = document.getElementById('languages');
         const countryFlag = document.getElementById('countryflag');
 
+        nativeElement.textcontent = country.nativeName;
         countryNameElement.textContent = country.name.common;
         populationElement.textContent = country.population;
         regionElement.textContent = country.region;
