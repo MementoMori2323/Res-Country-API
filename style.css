@@ -84,19 +84,26 @@ button:hover{
 .dark-mode #searchbar{
     background-color:  hsl(209, 23%, 22%);
     color: white;
-    font-family: 'Nunito Sans', sans-serif;
 }
 .dark-mode #searchbar::placeholder{
     color: white;
 }
 .dark-mode main{
     background-color: hsl(207, 26%, 17%);
+    transition: 0.5s;
 }
 .dark-mode .countryinfo{
     background-color: hsl(209, 23%, 22%);
 }
 .dark-mode footer{
    background-color: hsl(207, 26%, 17%);
+}
+.dark-mode .countries button{
+    color: white;
+}
+.dark-mode .backB a{
+    color: white;
+    background-color:hsl(209, 23%, 22%);
 }
 /* DarkMode & Light Mode */
 .title{
@@ -146,10 +153,20 @@ button:hover{
     border: 1px solid rgba(168, 166, 166, 0.341);
     width: 110%;
 }
+.countries button{
+    border: none;
+    background-color: transparent;
+}
 .show{
     display: block;
 }
 main{
+    padding:  0 54px;
+    gap: 30px;
+    content-visibility: auto;
+    transition: 0.5s;
+}
+.Cdetails{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -157,9 +174,6 @@ main{
     align-items: center;
     align-content: center;
     transition: 0.5s;
-    padding:  0 54px;
-    gap: 30px;
-    content-visibility: auto;
 }
 .countrycard{
     border-radius: 5px;
@@ -192,6 +206,33 @@ footer{
     width: 200%;
     border: 1px solid rgba(168, 166, 166, 0.341);
     border-radius: 5px;
+}
+/* country info page */
+.backB {
+    padding: 54px;
+}
+.backB a{
+    border: 1px solid rgb(155, 154, 154);
+    padding:  4px 24px;
+    border-radius: 5px;
+    background-color: white;
+}
+.info-page{
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.title{
+    margin-bottom: 5px;
+}
+.countriesdetails li{
+    padding: 4px 0;
+}
+.infolist{
+    display: flex;
+    gap: 120px;
 }
 @media only screen and (max-width: 644px){
     nav{
@@ -229,5 +270,20 @@ footer{
     }
     img, svg, picture{
         max-width: 100%;
+    }
+    .info-page{
+        align-items: flex-start;
+        padding: 0 14px;
+    }
+    .backB {
+        padding: 34px 14px;
+    }
+    .infolist{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }.detailedinfo1, .detailedinfo2{
+        font-size: 14px;
     }
 };
