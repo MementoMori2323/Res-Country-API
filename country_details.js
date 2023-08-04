@@ -53,7 +53,7 @@ function displayCountryDetails(country) {
         const languagesElement = document.getElementById('languages');
         const countryFlag = document.getElementById('countryflag');
 
-        nativeElement.textcontent = country.nativeName;
+        nativeElement.textContent = JSON.stringify(country.name);
         countryNameElement.textContent = country.name.common;
         populationElement.textContent = country.population;
         regionElement.textContent = country.region;
