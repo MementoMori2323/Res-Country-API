@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="CSS/style.css" rel="stylesheet">
+    <script src="JAVA/country_details.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <h3>Where in the world?</h3>
+        </div>
+        <div class="colorMs">
+            <button type="button" id="Dbtn" class="dbtn"><i class="bi bi-moon"></i> Dark Mode</button>
+            <button type="button" id="Lbtn" class="lbtn"><i class="bi bi-sun-fill"></i> Light Mode</button>
+        </div>
+    </nav>
+    <section class="backB" name="back">
+        <a href="index.html" title="back"><i class="bi bi-arrow-left"></i> Back</a>
+    </section>
+    <main class="info-page">
+        <picture>
+            <img src="" loading="lazy" id="countryflag">
+        </picture>
+        <div class="cInfo">
+            <div class="title">
+                <h2> <span id="country-name"></span></h2>
+            </div>
+            <div class="infolist">
+                <div class="detailedinfo1">
+                    <ul class="countriesdetails">
+                        <li><h4>Native Name: <span id="native"></span></h4></li>
+                        <li><h4>Population: <span id="population"></span></h4></li>
+                        <li><h4>Region: <span id="region"></span></h4></li>
+                        <li><h4>Sub Region: <span id="subregion"></span></h4></li>
+                        <li><h4>Capital: <span id="capital"></span></h4></li>
+                    </ul>
+                </div>
+                <div class="detailedinfo2">
+                    <ul class="countriesdetails">
+                        <li><h4>Top Level Domain: <span id="tld"></span></h4></li>
+                        <li><h4>Currencies: <span id="currencies"></span></h4></li>
+                        <li><h4>Languages: <span id="languages"></span></h4></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>        
+</body>
+</html>
